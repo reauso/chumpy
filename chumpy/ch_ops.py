@@ -82,7 +82,7 @@ for rtn in not_yet_implemented:
 
 def asarray(a, dtype=None, order=None):
     assert(dtype is None or dtype is np.float64)
-    assert(order is 'C' or order is None)
+    assert(order == 'C' or order is None)
     if hasattr(a, 'dterms'):
         return a
     return Ch(np.asarray(a, dtype, order))
